@@ -1,7 +1,20 @@
+import CommonWrapper from "@/common/CommonWrapper"
+import AiModal from "@/components/AiModal"
+import GameForm from "@/components/GameForm"
+import { useLocation } from "react-router-dom"
 
 const Home = () => {
+  const location = useLocation()
+  const isAiModalRoute = location.pathname === "/aimodal"
+
   return (
-    <div className="min-h-screen">Home</div>
+    <CommonWrapper>
+      <div className="min-h-screen flex justify-center items-center">
+        {!isAiModalRoute && <GameForm />}
+        {/* Only show AiModal on the aimodal route */}
+        {isAiModalRoute && <AiModal/>}
+      </div>
+    </CommonWrapper>
   )
 }
 

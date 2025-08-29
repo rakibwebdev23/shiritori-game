@@ -9,7 +9,9 @@ import { store } from "./store/store.ts";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Provider store={store}>
-      <RouterProvider router={routes} />
+      <div className="bg-[#2F2F2F]">
+<RouterProvider router={routes} />
+      </div>
     </Provider>
   </StrictMode>
 );
