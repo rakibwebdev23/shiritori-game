@@ -38,7 +38,7 @@ const GameForm: React.FC = () => {
 
         {/* Buttons Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-lg mx-auto">
-          <Link to="/aimodal"><GameButton 
+          <Link to=""><GameButton 
             text="Tutorial" 
             onClick={() => handleButtonClick("Tutorial")} 
           /></Link>
@@ -46,10 +46,12 @@ const GameForm: React.FC = () => {
             text="Instructions" 
             onClick={() => handleButtonClick("Instructions")} 
           />
-          <GameButton 
+                  <Link to="/aimodal">
+                      <GameButton 
             text="Single Player" 
             onClick={() => handleButtonClick("Single Player")} 
           />
+                  </Link>
           <GameButton 
             text="Multiplayer" 
             onClick={() => handleButtonClick("Multiplayer")} 
